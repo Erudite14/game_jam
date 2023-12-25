@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfs0tj6e850wt"]
+
+[ext_resource type="Shader" path="res://Shaders/JitterFree.gdshader" id="1_86fdi"]
+[ext_resource type="Texture2D" uid="uid://cs0sv16fufmka" path="res://Assets/ezekieleastbrook_Graffiti_Streets_Stores_Gritty_Graffiti_downto_f9bc1147-192d-4aac-9818-3d5f25d2142c.png" id="1_471d3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ld0o4"]
+shader = ExtResource("1_86fdi")
+
+[node name="title" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_ld0o4")
+offset_left = 4.0
+offset_top = 9.0
+offset_right = 1460.0
+offset_bottom = 825.0
+texture = ExtResource("1_471d3")
+
+[node name="Start Game" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 311.0
+offset_right = 270.0
+offset_bottom = 350.0
+text = "Start game"
+
+[node name="Credits" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 369.0
+offset_right = 278.0
+offset_bottom = 410.0
+text = "Credits"
+
+[node name="Leader board" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 427.0
+offset_right = 275.0
+offset_bottom = 469.0
+text = "Leader Board"
